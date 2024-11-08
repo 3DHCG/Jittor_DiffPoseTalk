@@ -73,11 +73,11 @@ Note: Due to the dependencies between the components, it is best to compile in t
 
 ## Inference
 
-### Download the pre-trained model
+### 1. Download the pre-trained model
 
 You can download the pre-trained model of the Style Encoder from [here](https://drive.google.com/drive/folders/19-QqG6Fi5j6PcWL-I_If_Xb10qHsoUqN?usp=sharing), then please extract the files under the `./experiments` folder.
 
-### 1. Extract Style Features
+### 2. Extract Style Features
 
 The style encoder can extract a style feature from an arbitray four-second motion sequence:
 
@@ -86,7 +86,7 @@ python extract_style.py --exp_name <STYLE_ENC_NAME> --iter <STYLE_ENC_ITER> -c <
 ```
 Note that the `<FLAME_MOTION_SEQ>` should be a `.npz` file that has the `exp` and `pose` keys. The extracted style feature will be saved under the corresponding folder (`<STYLE_ENC_NAME>/<STYLE_ENC_ITER>`) under `demo/input/style`.
 
-### 2. Generate Speech-Driven Animation
+### 3. Generate Speech-Driven Animation
 
 ```shell
 python demo.py --exp_name <DENOISING_NETWORK_NAME> --iter <DENOISING_NETWORK_ITER> -a <AUDIO> -c <SHAPE_TEMPLATE> -s <STYLE_FEATURE> -o <OUTPUT>.mp4 -n <N_REPITIONS> -ss <CFG_SCALE_FOR_STYLE> -sa <CFG_SCALE_FOR_AUDIO>
