@@ -1,0 +1,17 @@
+colorama
+chumpy==0.70
+cupy-cuda11x
+opencv-python
+librosa
+lmdb
+numpy==1.22.4
+packaging
+git+https://github.com/nghorbani/body_visualizer.git
+git+https://github.com/MPI-IS/configer
+git+https://github.com/MPI-IS/mesh.git
+pyrender
+tensorboardX
+torchmetrics
+trimesh
+typing
+tqdm
