@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 ### 4. Download jittor-related libraries
 
-Please download the required folders from [here](https://drive.google.com/drive/folders/1djcYsdsJVTo90MubyRUfDrrbCHm3BSQu?usp=sharing) The directory structure of downloaded folder is as following:
+Please download the required folders from [here](https://drive.google.com/drive/folders/1djcYsdsJVTo90MubyRUfDrrbCHm3BSQu?usp=sharing). The directory structure of downloaded folder is as following:
 
 ```shell
 diffposetalk_requirement/
@@ -57,7 +57,7 @@ diffposetalk_requirement/
 └── ...
 ```
 
-### 5. Compile the jittor-related libraries.
+### 5. Compile the jittor-related libraries
 
 After obtaining the ```diffposetalk_requirement``` folder, you need to compile all of them. Please run the following command in the same directory as the setup.py file in each of the libraries mentioned above:
 
@@ -75,7 +75,7 @@ Note: Due to the dependencies between the components, it is best to compile in t
 
 ### Download the pre-trained model
 
-You can download the pre-trained model of the Style Encoder from [here](https://drive.google.com/drive/folders/19-QqG6Fi5j6PcWL-I_If_Xb10qHsoUqN?usp=sharing), then please extract the files under the `/.experiments` folder.
+You can download the pre-trained model of the Style Encoder from [here](https://drive.google.com/drive/folders/19-QqG6Fi5j6PcWL-I_If_Xb10qHsoUqN?usp=sharing), then please extract the files under the `./experiments` folder.
 
 ### 1. Extract Style Features
 
@@ -86,7 +86,7 @@ python extract_style.py --exp_name <STYLE_ENC_NAME> --iter <STYLE_ENC_ITER> -c <
 ```
 Note that the `<FLAME_MOTION_SEQ>` should be a `.npz` file that has the `exp` and `pose` keys. The extracted style feature will be saved under the corresponding folder (`<STYLE_ENC_NAME>/<STYLE_ENC_ITER>`) under `demo/input/style`.
 
-### 2. Generate Speech-Driven Animations
+### 2. Generate Speech-Driven Animation
 
 ```shell
 python demo.py --exp_name <DENOISING_NETWORK_NAME> --iter <DENOISING_NETWORK_ITER> -a <AUDIO> -c <SHAPE_TEMPLATE> -s <STYLE_FEATURE> -o <OUTPUT>.mp4 -n <N_REPITIONS> -ss <CFG_SCALE_FOR_STYLE> -sa <CFG_SCALE_FOR_AUDIO>
