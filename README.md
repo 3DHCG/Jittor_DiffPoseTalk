@@ -125,6 +125,14 @@ python main_dpt.py --exp_name <DENOISING_NETWORK_NAME> --data_root <DATA_ROOT> -
 
 The denoising network will be saved under the `experiments/DPT/<exp_name>` folder. 
 
+## Special thanks
+
+The project is translated from pytorch version to jittor version by Yayu Zhang. If you have any quesion about the implementation in jittor version, feel free to contact
+
+```
+24120417@bjtu.edu.cn
+```
+
 ## Citation
 
 ```bibtex
